@@ -45,7 +45,7 @@ const Stopwatch = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white p-4 overflow-hidden">
       <h1 className="text-4xl font-bold mb-8">Stopwatch</h1>
       <div className="text-6xl font-mono bg-gray-800 p-4 rounded-lg shadow-lg mb-8">
         {formatTime(elapsedTime)}
@@ -79,9 +79,9 @@ const Stopwatch = () => {
           Reset
         </button>
       </div>
-      <div className="w-full max-w-md">
+      <div className="flex flex-col items-center w-full max-w-md">
         <h2 className="text-2xl font-bold mb-4 text-center">Laps</h2>
-        <ul className="bg-gray-800 p-4 rounded-lg shadow-lg max-h-64 overflow-auto list-decimal">
+        <ul className="bg-gray-800 p-4 rounded-lg shadow-lg w-full overflow-auto max-h-40">
           {laps.map((lap, index) => (
             <li key={index} className="mb-2">
               {formatTime(lap)}
